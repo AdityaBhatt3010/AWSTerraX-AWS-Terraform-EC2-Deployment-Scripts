@@ -22,7 +22,7 @@ Here’s how to **run the script** on each platform:
 
 ---
 
-#### **🟢 Linux (`SetUp_AWS_Terraform_Linux.sh`)
+#### **🟢 Linux** (`SetUp_AWS_Terraform_Linux.sh`)
 1. **Give execute permissions to the script:**  
    ```bash
    chmod +x SetUp_AWS_Terraform_Linux.sh
@@ -51,7 +51,7 @@ Here’s how to **run the script** on each platform:
 ---
 
 
-#### **🔴 macOS (`SetUp_AWS_Terraform_macOS.sh`)
+#### **🔴 macOS** (`SetUp_AWS_Terraform_macOS.sh`)
 1. **Give execute permissions to the script:**  
    ```bash
    chmod +x SetUp_AWS_Terraform_macOS.sh
