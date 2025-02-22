@@ -22,7 +22,7 @@ Here’s how to **run the script** on each platform:
 
 ---
 
-#### **🟢 Linux** (`SetUp_AWS_Terraform_Linux.sh`)
+#### **🟢 Linux (`SetUp_AWS_Terraform_Linux.sh`)
 1. **Give execute permissions to the script:**  
    ```bash
    chmod +x SetUp_AWS_Terraform_Linux.sh
@@ -50,8 +50,7 @@ Here’s how to **run the script** on each platform:
 
 ---
 
-
-#### **🔴 macOS** (`SetUp_AWS_Terraform_macOS.sh`)
+#### **🔴 macOS (`SetUp_AWS_Terraform_macOS.sh`)
 1. **Give execute permissions to the script:**  
    ```bash
    chmod +x SetUp_AWS_Terraform_macOS.sh
@@ -80,6 +79,22 @@ This will execute the **Terraform setup and AWS CLI installation** based on the 
 - **Storage:** 30 GiB gp3 (3000 IOPS, not encrypted)
 - **Security Group:** Allows RDP (3389), HTTP (80), and HTTPS (443)
 - **Key Pair:** Created and saved as `KeyPair.ppk`
+
+### **🆕 Amazon Linux 2023 with Pre-installed Apache**
+- **Architecture:** 64-bit (x86)
+- **Instance Type:** `t2.micro`
+- **Storage:** 8 GiB gp3 (3000 IOPS, not encrypted)
+- **Security Group:** Allows SSH (22), HTTP (80), and HTTPS (443)
+- **Key Pair:** Created and saved as `KeyPair.pem`
+- **Pre-installed Software:** Apache Web Server with index page setup
+
+### **🆕 Windows Server 2019 with Pre-installed IIS**
+- **Architecture:** 64-bit (x86)
+- **Instance Type:** `t2.micro`
+- **Storage:** 30 GiB gp3 (3000 IOPS, not encrypted)
+- **Security Group:** Allows RDP (3389), HTTP (80), and HTTPS (443)
+- **Key Pair:** Created and saved as `KeyPair.ppk`
+- **Pre-installed Software:** IIS Web Server with index page setup
 
 ---
 
@@ -117,3 +132,4 @@ terraform destroy -auto-approve
 - To manually delete resources, remove them from **AWS Console**.
 
 ---
+
