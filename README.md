@@ -1,4 +1,4 @@
-# Terraform AWS EC2 Deployment
+# AWSxTerra: AWS EC2 Deployment Scripts via Terraform
 
 This repository contains Terraform scripts to deploy **Amazon Linux 2023** and **Windows Server 2019** instances on AWS.
 The configuration ensures that the instances are **Free Tier Eligible** and properly configured with security groups, key pairs, and storage options.
