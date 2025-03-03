@@ -1,13 +1,16 @@
 # Step 1: Download and install AWS CLI for Windows
-Invoke-WebRequest -Uri "https://awscli.amazonaws.com/AWSCLIV2.msi" -OutFile "AWSCLIV2.msi"
-Start-Process msiexec.exe -ArgumentList "/i AWSCLIV2.msi /quiet /norestart" -Wait
+ Invoke-WebRequest -Uri "https://awscli.amazonaws.com/AWSCLIV2.msi" -OutFile "AWSCLIV2.msi"
+ Start-Process msiexec.exe -ArgumentList "/i AWSCLIV2.msi /quiet /norestart" -Wait
 
 # Step 2: Verify AWS CLI installation
 aws --version
 
 # Step 3: Prompt user for AWS credentials
 $AWS_ACCESS_KEY_ID = Read-Host "Enter your AWS Access Key ID"
-$AWS_SECRET_ACCESS_KEY = Read-Host "Enter your AWS Secret Access Key" -AsSecureString | ConvertFrom-SecureString -AsPlainText
+$AWS_SECRET_ACCESS_KEY = Read-Host "Enter your AWS Secret Access Key" -AsSecureString
+$AWS_SECRET_ACCESS_KEY_Plain = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto(
+    [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($AWS_SECRET_ACCESS_KEY)
+)
 $AWS_REGION = Read-Host "Enter your AWS Region"
 
 # Step 4: Set AWS credentials
